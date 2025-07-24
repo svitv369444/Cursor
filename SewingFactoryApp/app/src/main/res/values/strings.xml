@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Швейное производство</string>
+    <string name="worker_not_selected">Работник не выбран</string>
+    <string name="select_worker">Выбрать работника</string>
+    <string name="scan_qr_code">Сканировать QR код</string>
+    <string name="start_task">Начать задание</string>
+    <string name="complete_task">Завершить задание</string>
+    <string name="sync_with_1c">Синхронизация с 1С</string>
+    <string name="today_stats">Статистика за сегодня</string>
+    <string name="current_task">Текущее задание</string>
+    <string name="task_completion">Завершение задания</string>
+    <string name="enter_quantity">Введите количество выполненных изделий</string>
+    <string name="complete">Завершить</string>
+    <string name="cancel">Отмена</string>
+    <string name="error_invalid_quantity">Введите корректное количество</string>
+    <string name="error_qr_scan">Ошибка при сканировании QR кода</string>
+    <string name="error_task_start">Ошибка при начале работы</string>
+    <string name="error_task_complete">Ошибка при завершении задания</string>
+    <string name="error_sync">Ошибка синхронизации с 1С</string>
+    <string name="error_stats_load">Ошибка при загрузке статистики</string>
+    <string name="task_not_found">Задание с QR кодом не найдено</string>
+    <string name="workers_list_empty">Список работников пуст. Выполните синхронизацию с 1С</string>
+    <string name="statistics">Статистика</string>
+    <string name="ok">OK</string>
+</resources>
