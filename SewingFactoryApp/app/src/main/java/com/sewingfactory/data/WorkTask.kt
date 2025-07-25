@@ -3,6 +3,7 @@ package com.sewingfactory.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
+import androidx.room.Index
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
@@ -21,6 +22,11 @@ import kotlinx.parcelize.Parcelize
             childColumns = ["workerId"],
             onDelete = ForeignKey.CASCADE
         )
+    ],
+    indices = [
+        Index(value = ["productId"]),
+        Index(value = ["workerId"]),
+        Index(value = ["status"])
     ]
 )
 @Parcelize

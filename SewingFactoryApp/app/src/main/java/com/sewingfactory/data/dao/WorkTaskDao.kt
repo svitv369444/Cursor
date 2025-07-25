@@ -27,13 +27,11 @@ interface WorkTaskDao {
     suspend fun getActiveTaskByWorker(workerId: String): WorkTask?
     
     @Query("""
-        SELECT wt.*, p.name as productName, p.price as productPrice 
-        FROM work_tasks wt 
-        INNER JOIN products p ON wt.productId = p.id 
-        WHERE wt.workerId = :workerId 
-        AND DATE(wt.completedAt/1000, 'unixepoch') = DATE(:date/1000, 'unixepoch')
-        AND wt.status = 'COMPLETED'
-        ORDER BY wt.completedAt DESC
+        SELECT * FROM work_tasks 
+        WHERE workerId = :workerId 
+        AND DATE(completedAt/1000, 'unixepoch') = DATE(:date/1000, 'unixepoch')
+        AND status = 'COMPLETED'
+        ORDER BY completedAt DESC
     """)
     suspend fun getCompletedTasksByWorkerAndDate(workerId: String, date: Long): List<WorkTask>
     
