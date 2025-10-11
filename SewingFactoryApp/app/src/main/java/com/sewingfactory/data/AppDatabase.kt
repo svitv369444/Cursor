@@ -12,9 +12,10 @@ import com.sewingfactory.data.dao.*
         Product::class,
         Worker::class,
         WorkTask::class,
-        WorkSession::class
+        WorkSession::class,
+        ChatMessage::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
@@ -24,6 +25,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun workerDao(): WorkerDao
     abstract fun workTaskDao(): WorkTaskDao
     abstract fun workSessionDao(): WorkSessionDao
+    abstract fun chatMessageDao(): ChatMessageDao
     
     companion object {
         @Volatile

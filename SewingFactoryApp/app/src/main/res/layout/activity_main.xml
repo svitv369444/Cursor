@@ -221,10 +221,19 @@
             android:id="@+id/btnSync"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="Синхронизация с 1С"
             android:drawableStart="@drawable/ic_sync"
             android:drawablePadding="8dp"
             style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <!-- Кнопка чата с агентом -->
+        <Button
+            android:id="@+id/btnChatAgent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💬 Чат с агентом"
+            style="@style/Widget.Material3.Button" />
 
         <!-- Прогресс бар -->
         <ProgressBar
