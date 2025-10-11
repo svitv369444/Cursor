@@ -1,5 +1,6 @@
 package com.sewingfactory
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -78,6 +79,11 @@ class MainActivity : AppCompatActivity() {
             // Кнопка просмотра статистики
             btnViewStats.setOnClickListener {
                 showStatsDialog()
+            }
+            
+            // Кнопка чата с агентом
+            btnChatAgent.setOnClickListener {
+                openChatActivity()
             }
         }
     }
@@ -226,5 +232,10 @@ class MainActivity : AppCompatActivity() {
             com.sewingfactory.data.TaskStatus.COMPLETED -> "Завершено"
             com.sewingfactory.data.TaskStatus.CANCELLED -> "Отменено"
         }
+    }
+    
+    private fun openChatActivity() {
+        val intent = Intent(this, ChatActivity::class.java)
+        startActivity(intent)
     }
 }
